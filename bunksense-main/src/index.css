@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BunkSense Design System — Notion-on-dark
+ * Dark navy canvas, soft white surfaces, blue accents.
+ * All colors are HSL.
+ */
+
+@layer base {
+  :root {
+    /* Light mode: airy paper */
+    --background: 40 20% 98%;
+    --foreground: 220 25% 12%;
+
+    --surface: 0 0% 100%;
+    --surface-elevated: 0 0% 100%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+
+    --primary: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-muted: 217 91% 96%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 25% 12%;
+
+    --muted: 220 14% 95%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 217 91% 96%;
+    --accent-foreground: 217 91% 35%;
+
+    --success: 152 60% 38%;
+    --success-foreground: 0 0% 100%;
+    --success-muted: 152 60% 95%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 12%;
+    --warning-muted: 38 92% 95%;
+
+    --danger: 0 75% 55%;
+    --danger-foreground: 0 0% 100%;
+    --danger-muted: 0 75% 96%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 217 91% 55%;
+
+    --radius: 0.625rem;
+
+    --shadow-sm: 0 1px 2px 0 hsl(220 25% 12% / 0.04);
+    --shadow-md: 0 4px 12px -2px hsl(220 25% 12% / 0.08), 0 2px 4px -2px hsl(220 25% 12% / 0.04);
+    --shadow-lg: 0 16px 40px -12px hsl(220 25% 12% / 0.18);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 9% 30%;
+    --sidebar-primary: 217 91% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 95%;
+    --sidebar-accent-foreground: 220 25% 12%;
+    --sidebar-border: 220 13% 90%;
+    --sidebar-ring: 217 91% 55%;
+  }
+
+  .dark {
+    /* Notion-style dark: deep navy canvas, soft elevated surfaces */
+    --background: 215 28% 7%;
+    --foreground: 210 20% 96%;
+
+    --surface: 215 25% 11%;
+    --surface-elevated: 215 22% 14%;
+
+    --card: 215 25% 11%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 215 25% 13%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 213 94% 68%;
+    --primary-foreground: 215 28% 7%;
+    --primary-muted: 213 60% 18%;
+
+    --secondary: 215 20% 16%;
+    --secondary-foreground: 210 20% 96%;
+
+    --muted: 215 20% 14%;
+    --muted-foreground: 215 14% 62%;
+
+    --accent: 213 60% 18%;
+    --accent-foreground: 213 94% 80%;
+
+    --success: 152 65% 50%;
+    --success-foreground: 215 28% 7%;
+    --success-muted: 152 50% 16%;
+
+    --warning: 38 95% 60%;
+    --warning-foreground: 215 28% 7%;
+    --warning-muted: 38 50% 16%;
+
+    --danger: 0 80% 65%;
+    --danger-foreground: 0 0% 100%;
+    --danger-muted: 0 50% 18%;
+
+    --destructive: 0 80% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 18%;
+    --input: 215 20% 18%;
+    --ring: 213 94% 68%;
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 12px -2px hsl(0 0% 0% / 0.35);
+    --shadow-lg: 0 24px 60px -12px hsl(0 0% 0% / 0.55);
+
+    --sidebar-background: 215 28% 8%;
+    --sidebar-foreground: 215 14% 70%;
+    --sidebar-primary: 213 94% 68%;
+    --sidebar-primary-foreground: 215 28% 7%;
+    --sidebar-accent: 215 20% 14%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 215 20% 16%;
+    --sidebar-ring: 213 94% 68%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+  body { @apply bg-background text-foreground; font-feature-settings: "cv02","cv03","cv04","cv11"; }
+  .font-serif-display { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
+}
+
+@layer components {
+  .bs-card {
+    @apply bg-card border border-border rounded-xl;
+    box-shadow: var(--shadow-sm);
+  }
+  .bs-card-elevated {
+    @apply bg-card border border-border rounded-xl;
+    box-shadow: var(--shadow-md);
+  }
+  .bs-grid-bg {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .bs-radial-glow {
+    background: radial-gradient(ellipse 60% 50% at 50% 0%, hsl(var(--primary) / 0.18), transparent 70%);
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .animate-in-up { animation: in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  @keyframes in-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
