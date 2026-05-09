@@ -1,6 +1,6 @@
 # 🎓 BunkSense
 
-> "I stopped tracking attendance in spreadsheets. BunkSense just tells me." 
+> "I stopped tracking attendance in spreadsheets. BunkSense just tells me."
 
 BunkSense is a modern, fast, and secure student attendance tracking application. Designed to replace tedious spreadsheets, BunkSense makes it effortless for students to monitor their class attendance, calculate percentages, and plan their bunks perfectly! 🚀
 
