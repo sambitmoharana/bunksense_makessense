@@ -160,6 +160,17 @@ Check out the live application here:
 ### Analytics
 ![Analytics](bunksense-main/public/analytics.png)
 
+### AI Advisor
+
+#### 📊AI Weekly Insights
+![AI Advisor](bunksense-main/public/ai_weekly_insights.png)
+
+#### 💬AI Advisor Chatbot
+![AI Advisor](bunksense-main/public/ai_advisor_chatbot.png)
+
+### AI Chatbot
+![AI Chatbot](bunksense-main/public/ai_chatbot.png)
+
 ## ⭐ Why BunkSense?
 
 Most attendance trackers only record data.
