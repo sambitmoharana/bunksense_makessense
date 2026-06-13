@@ -31,6 +31,16 @@ const sections = [
     ],
   },
   {
+    title: "AI Academic Advisor & Insights",
+    items: [
+      { q: "How does the AI Academic Advisor work?", a: "The advisor looks at your current attendance and weekly timetable to suggest the best days to skip and how to save subjects with shortage." },
+      { q: "What is BunkSense AI Weekly Insights?", a: "It is a strategy dashboard showing your risk scorecard and a daily calendar highlighting which upcoming periods are safe or risky." },
+      { q: "Is my chat data private?", a: "Yes. All chats are temporary and are never saved in a database. Refreshing or logging out clears everything permanently." },
+      { q: "Does BunkSense require any setup or keys?", a: "No, it works automatically. We handle all connections securely on our servers so you don't have to configure anything." },
+      { q: "What happens if the advisor is offline?", a: "If our servers are offline, a backup calculator takes over to compute your recovery stats instantly so the advice is always ready." },
+    ],
+  },
+  {
     title: "Privacy & data",
     items: [
       { q: "Is my data private?", a: "Yes. Every subject, attendance entry, and timetable slot is tied to your account and protected with row-level security at the database layer. Other users can never see your data." },

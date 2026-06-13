@@ -15,6 +15,7 @@ import Subjects from "./pages/app/Subjects";
 import Simulator from "./pages/app/Simulator";
 import Planner from "./pages/app/Planner";
 import Analytics from "./pages/app/Analytics";
+import Advisor from "./pages/app/Advisor";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
               <Route path="/app/simulator" element={<Simulator />} />
               <Route path="/app/planner" element={<Planner />} />
               <Route path="/app/analytics" element={<Analytics />} />
+              <Route path="/app/advisor" element={<Advisor />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

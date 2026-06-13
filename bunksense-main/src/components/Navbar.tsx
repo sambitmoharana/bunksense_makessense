@@ -30,6 +30,7 @@ export const Navbar = () => {
         { to: "/app/simulator", label: "Simulator" },
         { to: "/app/planner", label: "Planner" },
         { to: "/app/analytics", label: "Analytics" },
+        { to: "/app/advisor", label: "AI Advisor" },
       ]
     : [
         { to: "/features", label: "Features" },

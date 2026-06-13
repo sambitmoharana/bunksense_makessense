@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Navbar } from "./Navbar";
+import { AdvisorChatWidget } from "./AdvisorChatWidget";
 
 export const ProtectedLayout = ({ children }: { children: ReactNode }) => {
   const { user, loading } = useAuth();
@@ -14,9 +15,10 @@ export const ProtectedLayout = ({ children }: { children: ReactNode }) => {
   }
   if (!user) return <Navigate to="/auth" replace />;
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
       <Navbar />
       <main className="container py-8 animate-in-up">{children}</main>
+      <AdvisorChatWidget />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Calculator, LineChart, Sparkles, Shield, Zap, Check } from "lucide-react";
+import { ArrowRight, Calendar, Calculator, LineChart, Sparkles, Shield, Zap, Check, Bot, Brain } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -92,8 +92,8 @@ const Landing = () => {
             <Feature icon={Shield} title="Recovery plans" body="See how many consecutive classes you need to attend to climb back to safety." />
             <Feature icon={Zap} title="Bunk simulator" body="Try 'what-if' scenarios. See your % update in real time before you skip." />
             <Feature icon={Calendar} title="Weekly planner" body="Visual calendar of safe days, risky days, and must-attend classes." />
-            <Feature icon={LineChart} title="Analytics" body="Per-subject bars, safe-vs-risky pie, and weekly trend lines." />
-            <Feature icon={Sparkles} title="Smart suggestions" body="'Skip English today, attend Math.' Personalised insights every day." />
+            <Feature icon={Bot} title="AI Academic Advisor" body="Interactive chatbot that builds personalized attendance recovery strategies and timetabling advice." />
+            <Feature icon={Brain} title="AI Weekly Insights" body="Timetable-based risk heatmaps and strategy briefings generated specifically for your week." />
           </div>
         </div>
       </section>
@@ -102,12 +102,13 @@ const Landing = () => {
       <section id="how" className="py-24 border-t border-border bg-surface/40">
         <div className="container max-w-4xl">
           <div className="text-xs uppercase tracking-wider text-primary mb-3">How it works</div>
-          <h2 className="font-display text-4xl md:text-5xl mb-12 text-balance">Three steps. That's it.</h2>
+          <h2 className="font-display text-4xl md:text-5xl mb-12 text-balance">Four simple steps. That's it.</h2>
           <div className="space-y-4">
             {[
               { n: "01", t: "Add your subjects", b: "Drop in your subject names, total classes so far, and how many you've attended." },
               { n: "02", t: "We do the math", b: "BunkSense computes safe bunks, recovery requirements, and risk levels per subject." },
               { n: "03", t: "Plan with confidence", b: "Use the simulator and weekly planner to make smart calls, not anxious guesses." },
+              { n: "04", t: "Get AI-guided strategy", b: "Consult the AI Advisor chatbot or view your Weekly Insights to plan your attendance day-by-day." },
             ].map((s) => (
               <div key={s.n} className="bs-card p-6 flex gap-6 items-start">
                 <div className="font-display text-3xl text-primary shrink-0">{s.n}</div>
@@ -151,6 +152,8 @@ const Landing = () => {
             {[
               { q: "Is BunkSense free?", a: "Yes — fully free for students. No card required." },
               { q: "How is 'safe bunks' calculated?", a: "We solve for the largest k where attended / (total + k) is still ≥ your required percentage." },
+              { q: "How secure is BunkSense AI?", a: "Extremely secure. Your chats and attendance are processed securely on our servers. We never ask for or save external keys, and your chat history is never stored in a database." },
+              { q: "What happens if the AI is offline?", a: "If our systems are offline, a built-in smart calculator takes over so you still get instant, accurate advice on recovering your attendance." },
               { q: "Can I change the required percentage per subject?", a: "Absolutely — each subject has its own threshold (default 75%)." },
               { q: "Is my data private?", a: "Your subjects and attendance are tied to your account with row-level security. Only you can see them." },
             ].map((f, i) => (
